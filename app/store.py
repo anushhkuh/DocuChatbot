@@ -43,6 +43,4 @@ class VectorStore:
         self.client.delete_collection(name=COLLECTION_NAME)
         self.collection = self.client.get_or_create_collection(name=COLLECTION_NAME, metadata={"hnsw:space": "cosine"})
 
-    def count(self)-> int:
-        return self.collection.count()
-        
+    
